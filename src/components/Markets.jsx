@@ -1,6 +1,7 @@
 // Markets.jsx
 import React from 'react';
 import { FaGlobeAfrica, FaGlobeEurope, FaGlobeAsia } from 'react-icons/fa';
+import worldMapImg from '../assets/world_map.png';
 
 const regions = [
   {
@@ -67,36 +68,7 @@ export default function Markets() {
             position: 'relative',
             zIndex: 1,
           }}>
-            <svg viewBox="0 0 900 440" style={{ width: '100%', maxWidth: 820, opacity: 0.92 }} xmlns="http://www.w3.org/2000/svg">
-              {/* Simplified world map continents */}
-              {/* North America */}
-              <ellipse cx="180" cy="170" rx="90" ry="70" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" strokeWidth="1" />
-              {/* South America */}
-              <ellipse cx="220" cy="300" rx="55" ry="75" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" strokeWidth="1" />
-              {/* Europe */}
-              <ellipse cx="430" cy="145" rx="55" ry="45" fill="rgba(61,168,130,0.25)" stroke="rgba(61,168,130,0.5)" strokeWidth="1.5" />
-              {/* Africa - HIGHLIGHTED */}
-              <ellipse cx="440" cy="280" rx="70" ry="90" fill="rgba(46,125,100,0.4)" stroke="var(--color-green)" strokeWidth="2" />
-              {/* Middle East */}
-              <ellipse cx="540" cy="220" rx="45" ry="35" fill="rgba(61,168,130,0.25)" stroke="rgba(61,168,130,0.5)" strokeWidth="1.5" />
-              {/* Asia */}
-              <ellipse cx="660" cy="170" rx="120" ry="80" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
-              {/* Southeast Asia */}
-              <ellipse cx="730" cy="270" rx="55" ry="40" fill="rgba(61,168,130,0.2)" stroke="rgba(61,168,130,0.4)" strokeWidth="1.5" />
-              {/* Australia */}
-              <ellipse cx="740" cy="340" rx="55" ry="40" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
-
-              {/* Route lines */}
-              <line x1="440" y1="230" x2="430" y2="165" stroke="var(--color-green-light)" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.7" />
-              <line x1="440" y1="230" x2="540" y2="210" stroke="var(--color-green-light)" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.7" />
-              <line x1="540" y1="210" x2="730" y2="265" stroke="var(--color-green-light)" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.5" />
-
-              {/* Location dots */}
-              <circle cx="440" cy="260" r="6" fill="var(--color-green)" />
-              <circle cx="430" cy="155" r="5" fill="var(--color-green-light)" />
-              <circle cx="540" cy="215" r="5" fill="var(--color-green-light)" />
-              <circle cx="730" cy="270" r="4" fill="var(--color-green-light)" opacity="0.8" />
-            </svg>
+            <img src={worldMapImg} alt="KJS West Global Operations Map" style={{ width: '100%', maxWidth: 820, borderRadius: 8, opacity: 0.95, boxShadow: '0 16px 48px rgba(0,0,0,0.4)' }} />
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: 32, marginTop: 24, flexWrap: 'wrap' }}>
               {[

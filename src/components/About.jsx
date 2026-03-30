@@ -1,5 +1,6 @@
 // About.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiCheckCircle, FiArrowRight } from 'react-icons/fi';
 
 const highlights = [
@@ -63,8 +64,8 @@ export default function About() {
             ))}
           </div>
 
-          <a
-            href="#about"
+          <Link
+            to="/about"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -90,8 +91,8 @@ export default function About() {
               e.currentTarget.style.color = 'var(--color-green)';
             }}
           >
-            Read Our Full Story <FiArrowRight size={13} />
-          </a>
+            Read More About Us <FiArrowRight size={13} />
+          </Link>
         </div>
 
         {/* Visual */}
